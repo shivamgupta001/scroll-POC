@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Application</title>
+	<style>
+		div{
+			border: 1px solid pink;
+		}
+		.table_body{
+			background-color: red;
+			color: white;
+			width : 500px;
+			height : 500px;
+		}
+		.table_header{
+			background-color: yellow;
+			color:black;
+			width : 500px;
+			height : 50px;
+		}
+		.width--300{
+			width : 300px;
+			height : 300px;
+		}
+		.overflowx--auto{
+			overflow-x: scroll;
+			overflow-y: hidden;
+		}
+		.overflowy--auto{
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+		.c{
+			width: 300px;
+		    position: fixed;
+		    height: 231px;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="width--300 overflowx--auto" id="a">
+		<div class="table_header">
+			<div >Read Answer
+				I'm in the military and am allowed to trade with no fees; should I trade actively or invest in a mutual fund?</div>
+		</div>
+		<div class="overflowy--auto c">
+			<div class="table_body" id="b">
+				Can I use an amount from a traditional IRA account to buy my first home without a tax penalty? I'm under 59 years old. I want to avoid private mortgage ...
+				What is a better vehicle for saving for my child's education costs: a whole life insurance policy or a 529 plan?
+				I'm considering the possibility of using whole life insurance for two purposes. I want to protect my family with life insurance, and I want to start ...
+
+				Read Answer
+				I'm in the military and am allowed to trade with no fees; should I trade actively or invest in a mutual fund?
+				I trade with TradeStation and they don't charge any fees for trading if you are in the military. I am 22 years old with about $10,000 for investing. ...
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var a = document.getElementById("a");
+		var b = document.getElementById("b");
+		a.addEventListener("scroll", function(e){
+			b.style.transform = 'translateX('+-1*this.scrollLeft+'px)';
+		});
+	</script>
+</body>
+</html>
